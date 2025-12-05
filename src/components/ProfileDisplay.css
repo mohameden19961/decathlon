@@ -1,0 +1,426 @@
+.profile-display {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-header h2 {
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.posture-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff, #00c9ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 0.3rem;
+}
+
+.score-description {
+  max-width: 300px;
+  text-align: left;
+  font-size: 1rem;
+  color: #495057;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #28a745;
+}
+
+.profile-details {
+  margin-bottom: 3rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.detail-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+}
+
+.detail-card h3 {
+  color: #007bff;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-item {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-item .label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.detail-item .value {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.tag {
+  background: #e3f2fd;
+  color: #007bff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tag.warning {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.tag.sport {
+  background: #d4edda;
+  color: #155724;
+}
+
+.tag.equipment {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.recommendations {
+  margin-top: 3rem;
+}
+
+.recommendations h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.recommendations-subtitle {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.exercise-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.exercise-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.exercise-header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 1.5rem;
+}
+
+.exercise-header h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.exercise-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.difficulty {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+}
+
+.exercise-body {
+  padding: 1.5rem;
+}
+
+.muscles-targeted h4 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.muscles-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.muscle-tag {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  border: 1px solid #dee2e6;
+}
+
+.benefits h4 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.benefits ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefits li {
+  padding: 0.3rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.benefits li:before {
+  content: '✓';
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.select-exercise-btn {
+  margin: 1.5rem;
+  padding: 1rem;
+  width: calc(100% - 3rem);
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.select-exercise-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.cta-section {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.cta-section h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.products-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #ff6b35, #ff4500);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.products-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+/* DARK MODE */
+.dark .score-circle {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+}
+
+.dark .score-description {
+  background: #2d3748;
+  color: #e0e0e0;
+  border-left-color: #2e7d32;
+}
+
+.dark .detail-card {
+  background: #1f1f1f;
+}
+
+.dark .detail-card h3 {
+  color: #1e88e5;
+  border-bottom-color: #4a5568;
+}
+
+.dark .detail-item .label {
+  color: #adb5bd;
+}
+
+.dark .detail-item .value {
+  color: #1e88e5;
+}
+
+.dark .tag {
+  background: #2d3748;
+  color: #1e88e5;
+}
+
+.dark .tag.warning {
+  background: #443e26;
+  color: #ffd54f;
+  border-color: #5d4c1c;
+}
+
+.dark .tag.sport {
+  background: #1b4332;
+  color: #81c784;
+}
+
+.dark .tag.equipment {
+  background: #2d3748;
+  color: #adb5bd;
+  border-color: #4a5568;
+}
+
+.dark .exercise-card {
+  background: #1f1f1f;
+}
+
+.dark .exercise-header {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+}
+
+.dark .muscles-targeted h4,
+.dark .benefits h4 {
+  color: #adb5bd;
+}
+
+.dark .muscle-tag {
+  background: #2d3748;
+  color: #adb5bd;
+  border-color: #4a5568;
+}
+
+.dark .benefits li {
+  color: #adb5bd;
+}
+
+.dark .cta-section {
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+}
+
+.dark .cta-section h3 {
+  color: #1e88e5;
+}
+
+.dark .cta-section p {
+  color: #adb5bd;
+}
+
+@media (max-width: 768px) {
+  .posture-score {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .score-description {
+    text-align: center;
+  }
+  
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .exercises-grid {
+    grid-template-columns: 1fr;
+  }
+}

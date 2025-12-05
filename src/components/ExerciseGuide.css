@@ -1,0 +1,504 @@
+.exercise-guide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.guide-header h2 {
+  color: #007bff;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.exercise-metadata {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.metadata-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.metadata-item .label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.metadata-item .value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.guide-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+  .guide-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.instructions-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.instructions-section h3 {
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.step-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.step-btn:hover:not(:disabled) {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.step-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.step-display {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.current-step {
+  font-size: 2rem;
+}
+
+.total-steps {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.instruction-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  position: relative;
+  border-left: 4px solid #007bff;
+}
+
+.step-number {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #007bff;
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.instruction-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.personalized-badge {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.angle-indicator,
+.alignment-check {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px dashed #007bff;
+}
+
+.angle-display {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.alignment-line {
+  width: 100%;
+  height: 3px;
+  background: #28a745;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.alignment-line:before,
+.alignment-line:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #28a745;
+  border-radius: 50%;
+  top: -4px;
+}
+
+.alignment-line:before {
+  left: 30%;
+}
+
+.alignment-line:after {
+  right: 30%;
+}
+
+.all-instructions {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+}
+
+.all-instructions h4 {
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.all-instructions ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.all-instructions li {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e9ecef;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.all-instructions li:hover {
+  background: #f8f9fa;
+}
+
+.all-instructions li.active {
+  background: #e3f2fd;
+  border-left: 3px solid #007bff;
+}
+
+.step-marker {
+  background: #007bff;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.all-instructions li.active .step-marker {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.benefits-card,
+.tips-card,
+.video-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-card h3,
+.tips-card h3,
+.video-card h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.benefits-card ul,
+.tips-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefits-card li,
+.tips-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #495057;
+}
+
+.benefits-card li:before {
+  content: '✓';
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.tips-card li:before {
+  content: '💡';
+  position: absolute;
+  left: 0;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-note {
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-align: center;
+  font-style: italic;
+}
+
+.guide-footer {
+  margin-top: 2rem;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: #856404;
+}
+
+.warning-box h4 {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.warning-box p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* DARK MODE */
+.dark .metadata-item .label {
+  color: #adb5bd;
+}
+
+.dark .metadata-item .value {
+  color: #e0e0e0;
+  background: #2d3748;
+}
+
+.dark .instructions-section,
+.dark .benefits-card,
+.dark .tips-card,
+.dark .video-card {
+  background: #1f1f1f;
+}
+
+.dark .instructions-section h3,
+.dark .benefits-card h3,
+.dark .tips-card h3,
+.dark .video-card h3 {
+  color: #1e88e5;
+}
+
+.dark .step-navigation {
+  background: #2d3748;
+}
+
+.dark .step-btn {
+  background: #1e88e5;
+}
+
+.dark .step-btn:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.dark .step-display {
+  color: #1e88e5;
+}
+
+.dark .instruction-card {
+  background: #2d3748;
+  border-left-color: #1e88e5;
+}
+
+.dark .step-number {
+  background: #1e88e5;
+}
+
+.dark .instruction-text {
+  color: #e0e0e0;
+}
+
+.dark .all-instructions {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.dark .all-instructions h4 {
+  color: #adb5bd;
+}
+
+.dark .all-instructions li {
+  border-bottom-color: #4a5568;
+}
+
+.dark .all-instructions li:hover {
+  background: #374151;
+}
+
+.dark .all-instructions li.active {
+  background: rgba(30, 136, 229, 0.1);
+  border-left-color: #1e88e5;
+}
+
+.dark .step-marker {
+  background: #1e88e5;
+}
+
+.dark .all-instructions li.active .step-marker {
+  background: #1f1f1f;
+  border-color: #1e88e5;
+  color: #1e88e5;
+}
+
+.dark .angle-indicator,
+.dark .alignment-check {
+  background: #2d3748;
+  border-color: #1e88e5;
+}
+
+.dark .angle-display {
+  color: #1e88e5;
+}
+
+.dark .alignment-line {
+  background: #4caf50;
+}
+
+.dark .alignment-line:before,
+.dark .alignment-line:after {
+  background: #4caf50;
+}
+
+.dark .benefits-card li,
+.dark .tips-card li {
+  color: #adb5bd;
+}
+
+.dark .benefits-card li:before {
+  color: #4caf50;
+}
+
+.dark .video-note {
+  color: #adb5bd;
+}
+
+.dark .warning-box {
+  background: #443e26;
+  border-color: #5d4c1c;
+  color: #ffd54f;
+}

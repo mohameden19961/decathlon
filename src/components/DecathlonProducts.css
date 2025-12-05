@@ -1,0 +1,437 @@
+.decathlon-products {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.products-header h2 {
+  color: #ff6b35;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.products-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-match {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.match-badge {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.match-percentage {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.match-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 0.3rem;
+}
+
+.match-description {
+  max-width: 400px;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.exercise-specific {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+}
+
+.exercise-specific h3 {
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.specific-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.all-products h3 {
+  color: #ff6b35;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border-color: #ff6b35;
+}
+
+.product-image-container {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 107, 53, 0.9);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-name {
+  color: #212529;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  min-height: 60px;
+  line-height: 1.3;
+}
+
+.product-description {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  min-height: 70px;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-tag.beginner {
+  background: #d4edda;
+  color: #155724;
+}
+
+.product-tag.intermediate {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.product-tag.advanced {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.product-tag.all {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.product-tag.office {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #28a745;
+}
+
+.buy-btn {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #ff6b35, #ff4500);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.buy-btn:hover {
+  background: linear-gradient(135deg, #ff4500, #e03e00);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.decathlon-brand {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.brand-logo {
+  background: #ff6b35;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.brand-tag {
+  background: white;
+  color: #ff6b35;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1px solid #ff6b35;
+}
+
+.products-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefits-card {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid #28a745;
+}
+
+.benefits-card h4 {
+  color: #28a745;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.benefits-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefits-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #495057;
+}
+
+.benefits-card li:before {
+  content: '✓';
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  padding: 2rem;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+}
+
+.cta-card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.cta-card p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+.decathlon-link {
+  display: inline-block;
+  background: white;
+  color: #007bff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  border: 2px solid white;
+}
+
+.decathlon-link:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* DARK MODE */
+.dark .exercise-specific {
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+}
+
+.dark .exercise-specific h3 {
+  color: #1e88e5;
+}
+
+.dark .all-products h3 {
+  color: #ff6b35;
+}
+
+.dark .product-card {
+  background: #1f1f1f;
+  border-color: #4a5568;
+}
+
+.dark .product-card:hover {
+  border-color: #ff6b35;
+}
+
+.dark .product-name {
+  color: #e0e0e0;
+}
+
+.dark .product-description {
+  color: #adb5bd;
+}
+
+.dark .product-footer {
+  border-top-color: #4a5568;
+}
+
+.dark .brand-tag {
+  background: #1f1f1f;
+}
+
+.dark .benefits-card {
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+}
+
+.dark .benefits-card h4 {
+  color: #4caf50;
+}
+
+.dark .benefits-card li {
+  color: #adb5bd;
+}
+
+.dark .benefits-card li:before {
+  color: #4caf50;
+}
+
+.dark .cta-card {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+}
+
+@media (max-width: 768px) {
+  .profile-match {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .match-description {
+    text-align: center;
+  }
+  
+  .specific-products-grid,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .products-footer {
+    grid-template-columns: 1fr;
+  }
+}
